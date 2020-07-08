@@ -1,0 +1,22 @@
+table{
+  width: 97%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+::ng-deep table thead{
+  background: #00c292 !important;
+}
+input.search{
+  line-height: normal;
+  border: 1px solid #00c292;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  min-width: 50%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

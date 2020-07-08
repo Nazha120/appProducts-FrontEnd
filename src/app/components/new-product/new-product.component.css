@@ -1,0 +1,24 @@
+.card-header{
+  text-align: center;
+  padding-top: 10px;
+  background: #00c29261;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-body{
+  margin: 23px;
+}
+
+.card {
+  border-color: #e0e0e0;
+  box-shadow: 4px 4px 6px #e4d9d9;
+  border-top-left-radius: 10px;
+  background: rgba(162, 162, 162, 0.19);
+
+}
+.btn-submit{
+  text-align: center;
+  padding-bottom: 15px;
+}

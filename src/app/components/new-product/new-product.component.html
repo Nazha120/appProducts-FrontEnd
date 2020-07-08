@@ -1,0 +1,149 @@
+<!-- Breadcomb area Start-->
+<div class="breadcomb-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcomb-list">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="breadcomb-wp">
+                <div class="breadcomb-icon">
+                  <i class="notika-icon notika-support"></i>
+                </div>
+                <div class="breadcomb-ctn">
+                  <h2>Ajouter un produit</h2>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcomb area End-->
+<!-- Typography area start-->
+<div class="typography-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="typography-mgn">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="normal-table-list mg-t-30">
+                <div class="basic-tb-hd">
+                  <h2>Mes produit</h2>
+                  <button
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modelAdd"
+                    class="pull-right btn btn-success notika-btn-success waves-effect"
+                  >
+                    <i class="notika-icon notika-down-arrow button-1"></i>
+                    Ajouter
+                  </button>
+                </div>
+
+
+                <app-products></app-products>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcomb area End-->
+<!-- model supprimer -->
+
+<!-- model supprimer -->
+<!-- modal ajouter-->
+<div class="modal fade" id="modelAdd" role="dialog">
+  <div class="modal-dialog modal-large">
+    <form [formGroup]="editForm" (ngSubmit)="onSaveProduct()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="message" class="alert alert-success alert-dismissible show text-center" role="alert">
+            <strong>Félicitations !</strong> Insertion effectuée avec success.
+          </div>
+          <div *ngIf="erreur" class="alert alert-danger alert-dismissible show text-center" role="alert">
+            <strong>Erreur !</strong> Reéssayer.
+          </div>
+          <div class="form-element-list">
+            <div class="basic-tb-hd">
+              <h1>Ajouter une Demande</h1>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <div class="nk-int-st">
+                    Libelle:<input
+                    type="text"
+                    class="form-control"
+                    name="libelle"
+                    formControlName="libelle"
+                    id="libelle"
+                    placeholder="Libelle"
+                  />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <div class="nk-int-st">
+                    Réference:<input
+                    type="number"
+                    class="form-control"
+                    name="reference"
+                    formControlName="reference"
+                    id="reference"
+                    placeholder="Réference"
+                  />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <div class="nk-int-st">
+                   Prix:<input
+                    type="number"
+                    class="form-control"
+                    name="objet"
+                    formControlName="prix"
+                    id="prix"
+                    placeholder="Prix"
+                  />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" [disabled]= "!editForm.valid" class="btn btn-default">
+            Ajouter
+          </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Fermer
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- modal ajouter end -->
+
+
