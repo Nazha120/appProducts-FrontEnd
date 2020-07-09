@@ -20,6 +20,7 @@ export class ProductService {
   public allProducts(): Observable<HttpResponse<Array<Product>>>{
     return this.httpClient.get<Array<Product>>(this.host , {observe: 'response'});
   }
+
   public addProduct(product: Product): Observable<Product> {
     return this.httpClient.post<Product>(this.host, product);
   }
