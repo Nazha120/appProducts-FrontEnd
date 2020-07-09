@@ -13,7 +13,6 @@ export class ProductService {
   constructor(private httpClient: HttpClient) {
   }
 
-
   public allProducts(): Observable<HttpResponse<Array<Product>>>{
     return this.httpClient.get<Array<Product>>(this.host , {observe: 'response'});
   }
