@@ -18,8 +18,7 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  constructor(private productService: ProductService,
-              private router: Router) { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.loadProducts();

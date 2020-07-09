@@ -1,4 +1,4 @@
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Product} from '../model/product.model';
 import {Injectable} from '@angular/core';
@@ -13,19 +13,11 @@ export class ProductService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public allProducts() {
-    return this.httpClient.get(this.host);
-  }
 
-  public getProducts(mc: string, page: number, size: number) {
-    return this.httpClient.get(this.host + 'search' + '?mc=' + mc + '&page=' + page + '&size=' + size);
+  public allProducts(): Observable<HttpResponse<Array<Product>>>{
+    return this.httpClient.get<Array<Product>>(this.host , {observe: 'response'});
   }
-
-  public getProduct(id: number): Observable<Product> {
-    return this.httpClient.get<Product>(this.host + id);
-  }
-
   public addProduct(product: Product): Observable<Product> {
-    return this.httpClient.post<Product>(this.host, Product);
+    return this.httpClient.post<Product>(this.host, product);
   }
 }

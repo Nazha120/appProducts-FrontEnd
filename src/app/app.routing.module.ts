@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent},
   { path: 'new-product', component: NewProductComponent},
 
-  { path: '', redirectTo: 'products' , pathMatch: 'full' },
+  { path: '', redirectTo: 'new-product' , pathMatch: 'full' },
 
 
 ];
